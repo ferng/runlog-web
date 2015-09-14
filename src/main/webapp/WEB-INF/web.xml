@@ -19,7 +19,6 @@
 
     <servlet-mapping>
         <servlet-name>runlog</servlet-name>
-        <url-pattern>/hello/*</url-pattern>
         <url-pattern>/runlog-web/*</url-pattern>
     </servlet-mapping>
 

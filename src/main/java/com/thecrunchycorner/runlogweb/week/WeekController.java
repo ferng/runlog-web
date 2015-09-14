@@ -11,7 +11,6 @@ public class WeekController {
     public String setupForm(Model model)
     {
         return "hello";
-//        return new ModelAndView("hello", "message", "BLAH BLAH");
     }
 
 }
