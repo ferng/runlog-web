@@ -1,12 +1,11 @@
 package com.thecrunchycorner.runlogweb.week;
 
-import java.time.Duration;
-
 public class Totals {
     private int distance;
-    private Duration time;
+    private FormattedDuration time;
     private float mph;
-    private Duration minPerMile;
+    private FormattedDuration minPerMile;
+    private String distUnit;
 
     public int getDistance() {
         return distance;
@@ -16,11 +15,11 @@ public class Totals {
         this.distance = distance;
     }
 
-    public Duration getTime() {
+    public FormattedDuration getTime() {
         return time;
     }
 
-    public void setTime(Duration time) {
+    public void setTime(FormattedDuration time) {
         this.time = time;
     }
 
@@ -32,11 +31,19 @@ public class Totals {
         this.mph = mph;
     }
 
-    public Duration getMinPerMile() {
+    public FormattedDuration getMinPerMile() {
         return minPerMile;
     }
 
-    public void setMinPerMile(Duration minPerMile) {
+    public void setMinPerMile(FormattedDuration minPerMile) {
         this.minPerMile = minPerMile;
+    }
+
+    public String getDistUnit() {
+        return distUnit;
+    }
+
+    public void setDistUnit(String distUnit) {
+        this.distUnit = distUnit;
     }
 }

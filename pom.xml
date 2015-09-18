@@ -7,7 +7,7 @@
     <packaging>war</packaging>
     <version>0.0.1</version>
     <name>runlog-web</name>
-    <url>http://maven.apache.org</url>
+    <url>http://thecrunchycorner.com/runlog</url>
 
 
     <properties>
@@ -54,6 +54,20 @@
             <version>1.2</version>
         </dependency>
 
+        <!-- webApp -->
+        <dependency>
+            <groupId>javax.servlet</groupId>
+            <artifactId>jstl</artifactId>
+            <version>1.2</version>
+        </dependency>
+
+        <!-- Tools -->
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-lang3</artifactId>
+            <version>3.4</version>
+        </dependency>
+
         <!-- Testing -->
         <dependency>
             <groupId>junit</groupId>
@@ -61,8 +75,6 @@
             <version>${junitVersion}</version>
             <scope>test</scope>
         </dependency>
-
-
     </dependencies>
 
     <build>
