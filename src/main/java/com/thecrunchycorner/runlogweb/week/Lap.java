@@ -1,6 +1,8 @@
 package com.thecrunchycorner.runlogweb.week;
 
-public class Lap {
+import java.io.Serializable;
+
+public class Lap implements Serializable {
     Totals totals;
 
     public Totals getTotals() {

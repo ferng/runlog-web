@@ -2,9 +2,10 @@ package com.thecrunchycorner.runlogweb.week;
 
 import org.apache.commons.lang3.time.DurationFormatUtils;
 
+import java.io.Serializable;
 import java.time.Duration;
 
-public class FormattedDuration {
+public class FormattedDuration implements Serializable {
     Duration duration;
 
     FormattedDuration(int hours, int minutes, int seconds) {

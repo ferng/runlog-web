@@ -56,11 +56,35 @@ public class WeekController {
         lap2.setTotals(totals2);
 
 
+
+        Lap lap3 = new Lap();
+
+        Totals totals3 = new Totals();
+
+        totals3.setDistance(21);
+
+        FormattedDuration totTime3 = new FormattedDuration(0, 1, 37);
+        totals3.setTime(totTime3);
+
+        totals3.setMph((float) 6.2);
+
+        FormattedDuration minPerMile3 = new FormattedDuration(0, 0, 23);
+        totals3.setMinPerMile(minPerMile3);
+
+        totals3.setDistUnit("yard");
+
+        lap3.setTotals(totals3);
+
         laps.add(lap);
         laps.add(lap2);
+        laps.add(lap3);
         activity.setLaps(laps);
 
         model.addAttribute("laps", laps);
+        ArrayList<ArrayList<Lap>> groupedLaps = new ArrayList<>();
+        groupedLaps= LapsViewHelper.listToListOfLists(2, laps);
+
+        model.addAttribute("groupedLaps", groupedLaps);
         return "hello";
 
 

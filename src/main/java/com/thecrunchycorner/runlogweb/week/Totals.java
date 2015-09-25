@@ -1,6 +1,8 @@
 package com.thecrunchycorner.runlogweb.week;
 
-public class Totals {
+import java.io.Serializable;
+
+public class Totals implements Serializable {
     private int distance;
     private FormattedDuration time;
     private float mph;
