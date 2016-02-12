@@ -1,13 +1,30 @@
 package com.thecrunchycorner.runlogweb.week;
 
 import java.io.Serializable;
+import java.time.Duration;
 
+import javax.persistence.*;
+
+@Entity
+@Table(name="Totals")
 public class Totals implements Serializable {
+    private int id;
     private int distance;
-    private FormattedDuration time;
+    private Duration time;
     private float mph;
-    private FormattedDuration minPerMile;
+    private Duration minPerMile;
     private String distUnit;
+
+    @Id
+    @Column(name="id")
+    @GeneratedValue(strategy= GenerationType.IDENTITY)
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
 
     public int getDistance() {
         return distance;
@@ -17,11 +34,11 @@ public class Totals implements Serializable {
         this.distance = distance;
     }
 
-    public FormattedDuration getTime() {
+    public Duration getTime() {
         return time;
     }
 
-    public void setTime(FormattedDuration time) {
+    public void setTime(Duration time) {
         this.time = time;
     }
 
@@ -33,11 +50,11 @@ public class Totals implements Serializable {
         this.mph = mph;
     }
 
-    public FormattedDuration getMinPerMile() {
+    public Duration getMinPerMile() {
         return minPerMile;
     }
 
-    public void setMinPerMile(FormattedDuration minPerMile) {
+    public void setMinPerMile(Duration minPerMile) {
         this.minPerMile = minPerMile;
     }
 
